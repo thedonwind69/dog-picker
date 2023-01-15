@@ -6,12 +6,18 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+var dogCategories = [
+  "Small Dogs",
+  "Medium Dogs",
+  "Large Dogs"
+]
+
 class App extends React.Component {
 
   constructor (props) {
     super(props);
     this.state = {
-      sex: "hello"
+      dogCategories: dogCategories
     }
   }
 
@@ -20,7 +26,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>Dog Picker {currentYear}!</h1>
-          <h1>{this.state.sex}</h1>
+          <h1>{this.state.dogCategories}</h1>
     
         </header>
       </div>
