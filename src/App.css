@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(0, 89, 255);
+  color: rgba(0, 89, 255, 0.708);
 }
 
 .App-link {
@@ -45,4 +45,55 @@
 .dog-category:hover {
   /* background-color: #61dafb8a;
   cursor: pointer; */
+}
+
+.LargeDogs {
+  background-image: url(../pics/LargeDogs.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+
+.MediumDogs {
+  background-image: url(../pics/MediumDogs.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+
+.SmallDogs {
+  background-image: url(../pics/SmallDogs.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+
+
+
+
+
+/* loader */
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid rgb(230, 0, 255);
+  border-color: rgb(247, 0, 255) transparent rgb(225, 0, 255) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

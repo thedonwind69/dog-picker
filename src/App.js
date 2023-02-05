@@ -19,7 +19,10 @@ function App () {
         <div class="col-4">
           <div class='card dog-category' >
             <h1>{category}</h1>
-            <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ" class="img-fluid"></img>
+            <div class={`${categoryName} img-fluid`}>
+                
+            </div>
+            {/* <img src="../pics/LargeDogs.jpg" class="img-fluid"></img> */}
           </div>
         </div>
       )
@@ -29,7 +32,7 @@ function App () {
 
   function selectDogCategory () {
     setIsLoadingState(prevState => {
-      return {isLoading: true}
+      return {...prevState, isLoading: true}
     })
     var selectedDogCategory = dogCategories[getRandomInt(dogCategories.length)];
     setDogCategoryState((prevState) => {
@@ -42,8 +45,10 @@ function App () {
     return (
       <div className='App'>
         <header class="App-header">
-            <h1>loading....</h1>
-            <h1>{dogCategoryState.chosenCategory}</h1>
+            <h1>Picking your furry category...!</h1>
+            <div class="lds-dual-ring">
+
+            </div>
         </header>
       </div>
     )
@@ -64,7 +69,7 @@ function App () {
           
 
             <button onClick={selectDogCategory} type="button" class="btn btn-primary btn-lg">Pick Random Category</button>
-
+            
           </header>
       </div>
     )
