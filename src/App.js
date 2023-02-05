@@ -9,10 +9,8 @@ function getRandomInt(max) {
 
 function App () {
 
-  const [dogCategoriesState, setDogCategoriesState] = useState({categories: ""});
-  const [isLoadingState, setIsLoading] = useState({isLoading: false});
-
-
+  const [dogCategoryState, setDogCategoryState] = useState({chosenCategory: null});
+  const [isLoadingState, setIsLoadingState] = useState({isLoading: false});
 
   function displayDogCategories () {
     const displayCategories = dogCategories.map((category) => {
@@ -21,12 +19,22 @@ function App () {
         <div class="col-4">
           <div class='card dog-category' >
             <h1>{category}</h1>
-            <img src="../pics/LargeDogs.jpg" class="img-fluid"></img>
+            <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ" class="img-fluid"></img>
           </div>
         </div>
       )
     })
     return displayCategories;
+  }
+
+  function selectDogCategory () {
+    setIsLoadingState(prevState => {
+      return {isLoading: true}
+    })
+    var selectedDogCategory = dogCategories[getRandomInt(dogCategories.length)];
+    setDogCategoryState((prevState) => {
+      return {chosenCategory: selectDogCategory}
+    })
   }
 
   if (isLoadingState.isLoading) {
@@ -52,6 +60,9 @@ function App () {
             </div>
           {/* .... */}
           
+
+            <button onClick={selectDogCategory} type="button" class="btn btn-primary btn-lg">Pick Random Category</button>
+
           </header>
       </div>
     )

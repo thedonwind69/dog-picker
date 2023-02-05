@@ -43,6 +43,6 @@
 }
 
 .dog-category:hover {
-  background-color: #61dafb8a;
-  cursor: pointer;
+  /* background-color: #61dafb8a;
+  cursor: pointer; */
 }
