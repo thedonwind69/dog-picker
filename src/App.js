@@ -33,8 +33,9 @@ function App () {
     })
     var selectedDogCategory = dogCategories[getRandomInt(dogCategories.length)];
     setDogCategoryState((prevState) => {
-      return {chosenCategory: selectDogCategory}
+      return {chosenCategory: selectedDogCategory}
     })
+    
   }
 
   if (isLoadingState.isLoading) {
@@ -42,6 +43,7 @@ function App () {
       <div className='App'>
         <header class="App-header">
             <h1>loading....</h1>
+            <h1>{dogCategoryState.chosenCategory}</h1>
         </header>
       </div>
     )
