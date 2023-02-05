@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import { dogCategories} from './data';
 
 var currentYear = new Date().getFullYear();
 function getRandomInt(max) {
@@ -26,7 +27,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>Dog Picker {currentYear}!</h1>
-          <h1>{this.state.dogCategories}</h1>
+          <h1>{}</h1>
     
         </header>
       </div>
