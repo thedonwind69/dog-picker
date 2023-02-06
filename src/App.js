@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState} from 'react';
 import { dogCategories} from './data';
+import ChosenCategory from './chosenCategory';
 
 var currentYear = new Date().getFullYear();
 function getRandomInt(max) {
@@ -17,12 +18,11 @@ function App () {
       var categoryName = category.split(" ").join("");
       return (
         <div class="col-4">
-          <div class='card dog-category' >
-            <h1>{category}</h1>
-            <div class={`${categoryName} img-fluid`}>
+          <div class='card' >
+            <h1 class='text-center'>{category}</h1>
+            <div class={`${categoryName}`}>
                 
             </div>
-            {/* <img src="../pics/LargeDogs.jpg" class="img-fluid"></img> */}
           </div>
         </div>
       )
@@ -34,11 +34,18 @@ function App () {
     setIsLoadingState(prevState => {
       return {...prevState, isLoading: true}
     })
+
     var selectedDogCategory = dogCategories[getRandomInt(dogCategories.length)];
     setDogCategoryState((prevState) => {
       return {chosenCategory: selectedDogCategory}
     })
-    
+
+    setTimeout(function() { 
+      setIsLoadingState(prevState => {
+        return {...prevState, isLoading: false}
+      })
+    }.bind(this), 2000)
+
   }
 
   if (isLoadingState.isLoading) {
@@ -52,27 +59,31 @@ function App () {
         </header>
       </div>
     )
+  } else if (!isLoadingState.isLoading && dogCategoryState.chosenCategory) {
+      return (
+        <ChosenCategory chosenCategory={dogCategoryState.chosenCategory}/>
+      )
   } else {
-    return (
-      <div className="App">
-          <header className="App-header">
-      
-            <h1 class="dog-picker-title"><strong>DOG PICKER {currentYear}!</strong></h1>
-            
-          {/* display the dog categories */}
-            <div class="container">
-              <div class="row">
-                {displayDogCategories()}
+      return (
+        <div className="App">
+            <header className="App-header">
+        
+              <h1 class="dog-picker-title"><strong>DOG PICKER {currentYear}!</strong></h1>
+              
+            {/* display the dog categories */}
+              <div class="container">
+                <div class="row">
+                  {displayDogCategories()}
+                </div>
               </div>
-            </div>
-          {/* .... */}
-          
-
-            <button onClick={selectDogCategory} type="button" class="btn btn-primary btn-lg">Pick Random Category</button>
+            {/* .... */}
             
-          </header>
-      </div>
-    )
+
+              <button onClick={selectDogCategory} type="button" class="btn btn-primary btn-lg">Pick Random Category</button>
+              
+            </header>
+        </div>
+      )
   }
   
 }
