@@ -182,6 +182,17 @@
 }
 /* dogs end */
 
+.chosen-breed-pic {
+  min-width: 600px;
+  min-height: 400px;
+}
+
+@media screen and (max-width: 615px) {
+  .chosen-breed-pic {
+      min-width: 400px;
+      min-height: 300px;
+  }
+}
 
 
 /* loader */

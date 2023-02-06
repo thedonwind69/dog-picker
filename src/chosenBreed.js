@@ -5,7 +5,15 @@ function ChosenBreed (props) {
     return (
         <div class='App'>
             <div class='App-header'>
-                this is your chosen dog
+                <h1>You picked a {props.chosenBreed.name}!</h1>
+                <div class={`
+                chosen-breed-pic 
+                ${props.chosenBreed.name.split(" ").join("")} 
+                border border-danger
+                animate__animated
+                animate__rubberBand
+                `}>
+                </div>
             </div>
         </div>
     )

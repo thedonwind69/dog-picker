@@ -2,10 +2,39 @@ import React, {useState} from 'react';
 import { dogCategories, LargeDogs, SmallDogs, MediumDogs} from './data';
 import ChosenBreed from './chosenBreed.js';
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
 function ChosenCategory (props) {
 
     const [chosenBreedState, setChosenBreedState] = useState({chosenBreed: null});
     const [isLoadingState, setIsLoadingState] = useState({isLoading: false});
+
+
+    function selectDogBreed () {
+        var dogCategory = null;
+        if (props.chosenCategory == "Small Dogs") {
+            dogCategory = SmallDogs;
+        } else if (props.chosenCategory == "Medium Dogs") {
+            dogCategory = MediumDogs;
+        } else if (props.chosenCategory == "Large Dogs") {
+            dogCategory = LargeDogs;
+        }
+
+        setIsLoadingState(prevState => {
+            return {...prevState, isLoading: true}
+          })
+
+        var randomNum = getRandomInt(dogCategory.length);
+        setChosenBreedState({chosenBreed: dogCategory[randomNum]});
+
+        setTimeout(function() { 
+            setIsLoadingState(prevState => {
+              return {...prevState, isLoading: false}
+            })
+          }.bind(this), 2000)
+    }
 
     if (isLoadingState.isLoading) {
         return (
@@ -18,7 +47,7 @@ function ChosenCategory (props) {
                 </header>
             </div>
         )
-    } else if (!isLoadingState && chosenBreedState.chosenBreed) {
+    } else if (!isLoadingState.isLoading && chosenBreedState.chosenBreed) {
         return (
             <ChosenBreed chosenBreed={chosenBreedState.chosenBreed}/>
         )
@@ -38,7 +67,7 @@ function ChosenCategory (props) {
                                 </div>
                             </div>
                             <div class='col-12 col-lg-6 border border-danger'>
-                                <button type="button" class="btn btn-primary btn-lg">Choose your dog breed!</button>
+                                <button onClick={selectDogBreed} type="button" class="btn btn-primary btn-lg">Choose your dog breed!</button>
                                 <button onClick={props.rechooseCategory} type="button" class="btn btn-primary btn-lg">Re-choose category</button>
                             </div>
                         </div>
