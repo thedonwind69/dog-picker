@@ -18,7 +18,7 @@ function ChosenCategory (props) {
                 </header>
             </div>
         )
-    } else if (!isLoadingState && chosenBreedState) {
+    } else if (!isLoadingState && chosenBreedState.chosenBreed) {
         return (
             <ChosenBreed chosenBreed={chosenBreedState.chosenBreed}/>
         )
