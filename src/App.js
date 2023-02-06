@@ -17,8 +17,8 @@ function App () {
     const displayCategories = dogCategories.map((category) => {
       var categoryName = category.split(" ").join("");
       return (
-        <div class="col-4">
-          <div class='card' >
+        <div class="col-12 col-lg-4">
+          <div class='card animate__animated animate__pulse' >
             <h1 class='text-center'>{category}</h1>
             <div class={`${categoryName}`}>
                 
@@ -48,6 +48,11 @@ function App () {
 
   }
 
+  function rechooseCategory () {
+    setIsLoadingState({isLoading: false});
+    setDogCategoryState({chosenCategory: null});
+  }
+
   if (isLoadingState.isLoading) {
     return (
       <div className='App'>
@@ -61,7 +66,10 @@ function App () {
     )
   } else if (!isLoadingState.isLoading && dogCategoryState.chosenCategory) {
       return (
-        <ChosenCategory chosenCategory={dogCategoryState.chosenCategory}/>
+        <ChosenCategory 
+          chosenCategory={dogCategoryState.chosenCategory}
+          rechooseCategory={rechooseCategory} 
+          />
       )
   } else {
       return (

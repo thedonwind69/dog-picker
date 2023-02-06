@@ -65,6 +65,124 @@
   min-height: 200px;
   background-size: 100% 100%;
 }
+/* dogs */
+.Akita {
+  background-image: url(../pics/Akita.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.AmericanBulldog {
+  background-image: url(../pics/AmericanBulldog.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.AustralianShepherd {
+  background-image: url(../pics/AustralianShepherd.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.BostonTerrier {
+  background-image: url(../pics/BostonTerrier.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.Boxer {
+  background-image: url(../pics/Boxer.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.Chihuahua {
+  background-image: url(../pics/Chihuahua.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.ChowChow {
+  background-image: url(../pics/ChowChow.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.CockerSpaniel {
+  background-image: url(../pics/CockerSpaniel.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.Dalmation {
+  background-image: url(../pics/Dalmation.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.Doberman {
+  background-image: url(../pics/Doberman.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.FrenchBulldog {
+  background-image: url(../pics/FrenchBulldog.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.GoldenRetriever {
+  background-image: url(../pics/GoldenRetriever.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.GreatDane {
+  background-image: url(../pics/GreatDane.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.LabradorRetriever {
+  background-image: url(../pics/LabradorRetriever.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.Maltese {
+  background-image: url(../pics/Maltese.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.Pomeranian {
+  background-image: url(../pics/Pomeranian.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.Pug {
+  background-image: url(../pics/Pug.jpeg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.Rottweiler {
+  background-image: url(../pics/Rottweiler.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+.ShihTzu {
+  background-image: url(../pics/ShihTzu.jpg);
+  background-repeat: no-repeat;
+  min-height: 200px;
+  background-size: 100% 100%;
+}
+/* dogs end */
+
+
 
 /* loader */
 .lds-dual-ring {
