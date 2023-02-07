@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/dog-picker/static/css/main.69750bee.css",
+    "main.js": "/dog-picker/static/js/main.e21a3799.js",
+    "static/js/787.daa3a689.chunk.js": "/dog-picker/static/js/787.daa3a689.chunk.js",
+    "static/media/Maltese.jpg": "/dog-picker/static/media/Maltese.d1c2c4dcf5133ddc3313.jpg",
+    "static/media/GreatDane.jpg": "/dog-picker/static/media/GreatDane.db52cf049569ca78f395.jpg",
+    "static/media/LabradorRetriever.jpg": "/dog-picker/static/media/LabradorRetriever.28b0cd32c6dae11616ac.jpg",
+    "static/media/Rottweiler.jpg": "/dog-picker/static/media/Rottweiler.f6158fdaead7f8896464.jpg",
+    "static/media/Boxer.jpg": "/dog-picker/static/media/Boxer.599abc282b7855b14b46.jpg",
+    "static/media/GoldenRetriever.jpg": "/dog-picker/static/media/GoldenRetriever.7056d2d2ab9d1f74a7d7.jpg",
+    "static/media/CockerSpaniel.jpg": "/dog-picker/static/media/CockerSpaniel.8a2c2c147137e764f73a.jpg",
+    "static/media/Doberman.jpg": "/dog-picker/static/media/Doberman.d7c2f53bcab1d095a199.jpg",
+    "static/media/ChowChow.jpg": "/dog-picker/static/media/ChowChow.f4ca99169b4e8fbd2c6d.jpg",
+    "static/media/AmericanBulldog.jpg": "/dog-picker/static/media/AmericanBulldog.1e737cd0612e1920eae5.jpg",
+    "static/media/Akita.jpg": "/dog-picker/static/media/Akita.debd6fe166589d4f8a1b.jpg",
+    "static/media/Chihuahua.jpg": "/dog-picker/static/media/Chihuahua.f6c2d21d332457ea5bdb.jpg",
+    "static/media/Pomeranian.jpg": "/dog-picker/static/media/Pomeranian.a61eb5d5463a4edd62c4.jpg",
+    "static/media/ShihTzu.jpg": "/dog-picker/static/media/ShihTzu.4164ecd4c42449b27aa6.jpg",
+    "static/media/FrenchBulldog.jpg": "/dog-picker/static/media/FrenchBulldog.4d96e9c188e64294626b.jpg",
+    "static/media/LargeDogs.jpg": "/dog-picker/static/media/LargeDogs.5f9da811c2be43bf49cd.jpg",
+    "static/media/BostonTerrier.jpg": "/dog-picker/static/media/BostonTerrier.ae0cbd897d22ad343f16.jpg",
+    "static/media/MediumDogs.jpg": "/dog-picker/static/media/MediumDogs.27735dfa41d410a47e70.jpg",
+    "static/media/SmallDogs.jpg": "/dog-picker/static/media/SmallDogs.8169f6e5cbc2b17ff528.jpg",
+    "static/media/AustralianShepherd.jpg": "/dog-picker/static/media/AustralianShepherd.b9a9fd968f41e4cd3f5d.jpg",
+    "static/media/Pug.jpeg": "/dog-picker/static/media/Pug.e762b8c8ff3d7fe0d695.jpeg",
+    "static/media/Dalmation.jpg": "/dog-picker/static/media/Dalmation.8c3a0c7d421540102d67.jpg",
+    "index.html": "/dog-picker/index.html",
+    "main.69750bee.css.map": "/dog-picker/static/css/main.69750bee.css.map",
+    "main.e21a3799.js.map": "/dog-picker/static/js/main.e21a3799.js.map",
+    "787.daa3a689.chunk.js.map": "/dog-picker/static/js/787.daa3a689.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69750bee.css",
+    "static/js/main.e21a3799.js"
+  ]
+}
