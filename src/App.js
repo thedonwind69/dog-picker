@@ -76,7 +76,7 @@ function App () {
         <div className="App">
             <header className="App-header">
         
-              <h1 class="dog-picker-title"><strong>DOG PICKER {currentYear}!</strong></h1>
+              <h1 class="dog-picker-title"><strong>DOG PICKER {currentYear}</strong></h1>
               
             {/* display the dog categories */}
               <div class="container">
