@@ -77,7 +77,7 @@ function App () {
             <header className="App-header">
         
               <h1 class="dog-picker-title"><strong>DOG PICKER {currentYear}</strong></h1>
-              <p>Can't decide which dog to get? Choose randomly.</p>
+              <p>Can't decide which dog to get? Choose randomly!</p>
               
             {/* display the dog categories */}
               <div class="container">
