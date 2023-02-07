@@ -87,7 +87,7 @@ function App () {
             {/* .... */}
             
 
-              <button onClick={selectDogCategory} type="button" class="btn btn-primary btn-lg">Pick Random Category</button>
+              <button onClick={selectDogCategory} type="button" class="btn btn-primary btn-lg">Pick Random Dog Category</button>
               
             </header>
         </div>
