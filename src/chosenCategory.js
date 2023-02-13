@@ -49,7 +49,7 @@ function ChosenCategory (props) {
         )
     } else if (!isLoadingState.isLoading && chosenBreedState.chosenBreed) {
         return (
-            <ChosenBreed chosenBreed={chosenBreedState.chosenBreed}/>
+            <ChosenBreed reChooseBreed={selectDogBreed} chosenBreed={chosenBreedState.chosenBreed}/>
         )
     } else {
         return (
@@ -57,16 +57,16 @@ function ChosenCategory (props) {
                 <div class="App-header">
                     <div class="container">
                         <div class='row'>
-                            <div class='col-12 col-lg-6 border border-danger'>
+                            <div class='col-12 '>
                                 <h1>Your category is {props.chosenCategory}!</h1>
                                 <p>Now click again to choose your specific breed!</p>
-                                <div class=''>
-                                    <div class={`${props.chosenCategory.split(" ").join("")}`}>
+                             
+                                <div class={`${props.chosenCategory.split(" ").join("")} chosen-category-pic`}>
 
-                                    </div>
                                 </div>
+                              
                             </div>
-                            <div class='col-12 col-lg-6 border border-danger'>
+                            <div class='col-12 '>
                                 <button onClick={selectDogBreed} type="button" class="btn btn-primary btn-lg">Choose your dog breed!</button>
                                 <button onClick={props.rechooseCategory} type="button" class="btn btn-primary btn-lg">Re-choose category</button>
                             </div>

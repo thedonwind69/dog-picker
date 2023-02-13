@@ -48,21 +48,18 @@
 .LargeDogs {
   background-image: url(../pics/LargeDogs.jpg);
   background-repeat: no-repeat;
-  min-height: 200px;
   background-size: 100% 100%;
 }
 
 .MediumDogs {
   background-image: url(../pics/MediumDogs.jpg);
   background-repeat: no-repeat;
-  min-height: 200px;
   background-size: 100% 100%;
 }
 
 .SmallDogs {
   background-image: url(../pics/SmallDogs.jpg);
   background-repeat: no-repeat;
-  min-height: 200px;
   background-size: 100% 100%;
 }
 /* dogs */
@@ -181,6 +178,13 @@
   background-size: 100% 100%;
 }
 /* dogs end */
+
+.chosen-category-pic {
+  min-height: 200px;
+  min-width: 200px;
+  max-width: 400px;
+  margin: auto;
+}
 
 .chosen-breed-pic {
   min-width: 600px;

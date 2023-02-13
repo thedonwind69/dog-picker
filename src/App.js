@@ -20,7 +20,7 @@ function App () {
         <div class="col-12 col-lg-4">
           <div class='card animate__animated animate__pulse' >
             <h1 class='text-center'>{category}</h1>
-            <div class={`${categoryName}`}>
+            <div class={`${categoryName} chosen-category-pic`}>
                 
             </div>
           </div>
@@ -49,8 +49,7 @@ function App () {
   }
 
   function rechooseCategory () {
-    setIsLoadingState({isLoading: false});
-    setDogCategoryState({chosenCategory: null});
+    selectDogCategory();
   }
 
   if (isLoadingState.isLoading) {

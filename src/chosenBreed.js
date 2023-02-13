@@ -14,6 +14,7 @@ function ChosenBreed (props) {
                 animate__rubberBand
                 `}>
                 </div>
+                <button onClick={props.reChooseBreed} class='btn btn-primary'>Re-select breed</button>
             </div>
         </div>
     )
