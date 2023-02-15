@@ -15,7 +15,7 @@ const SmallDogs = [
 ]
 
 const MediumDogs = [
-    {name: "Australian Sheperd"},
+    {name: "Australian Shepherd"},
     {name: "Dalmation"},
     {name: "Akita"},
     {name: "Chow Chow"},
