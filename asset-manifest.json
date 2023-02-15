@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dog-picker/static/css/main.2685a66a.css",
-    "main.js": "/dog-picker/static/js/main.c663ac20.js",
+    "main.js": "/dog-picker/static/js/main.6bf2d4de.js",
     "static/js/787.daa3a689.chunk.js": "/dog-picker/static/js/787.daa3a689.chunk.js",
     "static/media/Maltese.jpg": "/dog-picker/static/media/Maltese.d1c2c4dcf5133ddc3313.jpg",
     "static/media/GreatDane.jpg": "/dog-picker/static/media/GreatDane.db52cf049569ca78f395.jpg",
@@ -27,11 +27,11 @@
     "static/media/Dalmation.jpg": "/dog-picker/static/media/Dalmation.8c3a0c7d421540102d67.jpg",
     "index.html": "/dog-picker/index.html",
     "main.2685a66a.css.map": "/dog-picker/static/css/main.2685a66a.css.map",
-    "main.c663ac20.js.map": "/dog-picker/static/js/main.c663ac20.js.map",
+    "main.6bf2d4de.js.map": "/dog-picker/static/js/main.6bf2d4de.js.map",
     "787.daa3a689.chunk.js.map": "/dog-picker/static/js/787.daa3a689.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2685a66a.css",
-    "static/js/main.c663ac20.js"
+    "static/js/main.6bf2d4de.js"
   ]
 }
