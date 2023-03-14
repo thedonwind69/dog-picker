@@ -186,9 +186,24 @@
   margin: auto;
 }
 
+.game-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.game-criteria-container {
+  display: grid;
+}
+
 .chosen-breed-pic {
-  min-width: 600px;
-  min-height: 400px;
+  width: 560px;
+  height: 800px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+select, option {
+  text-align: center;
 }
 
 @media screen and (max-width: 615px) {

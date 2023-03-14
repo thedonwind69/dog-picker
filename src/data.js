@@ -32,4 +32,19 @@ const LargeDogs = [
     {name: "Golden Retriever"},
 ]
 
-export {dogCategories, SmallDogs, MediumDogs, LargeDogs}
+function getAllDogBreeds () {
+  var allCategories = [SmallDogs, MediumDogs, LargeDogs];  
+  var finalArray = [];
+  for (let i=0; i<allCategories.length; i++) {
+    let currentCategory = allCategories[i];
+    for (let j=0; j<currentCategory.length; j++) {
+        let currentBreed = currentCategory[j];
+        finalArray.push(currentBreed);
+    }
+  }
+  return finalArray;
+}
+
+const allDogBreeds = getAllDogBreeds();
+
+export {dogCategories, SmallDogs, MediumDogs, LargeDogs, allDogBreeds}

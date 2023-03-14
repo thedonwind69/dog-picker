@@ -2,6 +2,7 @@ import './App.css';
 import React, {useState} from 'react';
 import { dogCategories} from './data';
 import ChosenCategory from './chosenCategory';
+import { Link } from 'react-router-dom';
 
 var currentYear = new Date().getFullYear();
 function getRandomInt(max) {
@@ -76,7 +77,7 @@ function App () {
             <header className="App-header">
         
               <h1 class="dog-picker-title"><strong>DOG PICKER {currentYear}</strong></h1>
-
+              <Link to='/game'>Game</Link>
               
             {/* display the dog categories */}
               <div class="container">
