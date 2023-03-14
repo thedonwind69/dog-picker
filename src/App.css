@@ -160,7 +160,7 @@
   background-size: 100% 100%;
 }
 .Pug {
-  background-image: url(../pics/Pug.jpeg);
+  background-image: url(../pics/Pug.jpg);
   background-repeat: no-repeat;
   min-height: 200px;
   background-size: 100% 100%;
@@ -200,6 +200,11 @@
   height: 800px;
   margin: 5px;
   border-radius: 20px;
+}
+.tie-winners-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 select, option {

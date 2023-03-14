@@ -1,6 +1,8 @@
 import { allDogBreeds } from "./data";
 import { useState } from "react";
 import GameCriteria from "./GameCriteria";
+import DisplayWinner from "./DisplayWinner";
+import {Link} from 'react-router-dom';
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -14,7 +16,7 @@ function Game () {
     const [secondBreedChoice, setSecondBreedChoice] = useState(null);
     const [isLoadingStateFirstChoice, setIsLoadingStateFirstChoice] = useState(false);
     const [isLoadingStateSecondChoice, setIsLoadingStateSecondChoice] = useState(false);
-    const [winnerChosenOrNot, setWinnerChosenOrNot] = useState(false);
+    const [winner, setWinner] = useState(null);
 
     function getBreedArrayExludingTheFirst (firstBreedChoice) {
         var finalArray = [];
@@ -86,33 +88,42 @@ function Game () {
     }
 
     function displayGameCriteria () {
-        if (gameStartedOrNot) {
-            return <GameCriteria firstBreedChoice={firstBreedChoice} secondBreedChoice={secondBreedChoice}/>
+        if (gameStartedOrNot && !isLoadingStateSecondChoice && !isLoadingStateFirstChoice) {
+            return <GameCriteria 
+                firstBreedChoice={firstBreedChoice} 
+                secondBreedChoice={secondBreedChoice}
+                setWinner={setWinner}
+                />
         }
     }
 
-    return (
-        <div className="App">
-            <div className="App-header">
-                <h1>Game Here</h1>
+    if (winner) {
+        return (<DisplayWinner winner={winner} setWinner={setWinner} firstBreedChoice={firstBreedChoice} secondBreedChoice={secondBreedChoice} startGame={startGame}/>)
+    } else {
+        return (
+            <div className="App">
+                <div className="App-header">
 
-                <div class='game-container'>
-                    <div>{displayFirstChoice()}</div>
-
-                    <div class='game-criteria-container'>
-                        <h1></h1>
-                        <div>{displayGameCriteria()}</div> 
-                    </div>
-                    
-                    <div>{displaySecondChoice()}</div>
-                </div>
-               
-                {!gameStartedOrNot ? <button onClick={startGame}>Start Game</button> : <div></div>}
+                    {!gameStartedOrNot ? <h1>Start game to pick 2 breeds at random and decide which is better fit for you:</h1> : <div></div>}
                 
-            </div>
+                    <div class='game-container'>
+                        <div>{displayFirstChoice()}</div>
 
-        </div>
-    )
+                        <div class='game-criteria-container'>
+                            <h1></h1>
+                            <div>{displayGameCriteria()}</div> 
+                        </div>
+                        
+                        <div>{displaySecondChoice()}</div>
+                    </div>
+                
+                    {!gameStartedOrNot ? <button onClick={startGame}>Start Game</button> : <div></div>}
+                    
+                    <Link to='/dog-picker'>back to home</Link>
+                </div>
+            </div>
+        )
+    }
 
 }
 

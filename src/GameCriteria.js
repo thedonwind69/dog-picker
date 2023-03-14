@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function GameCriteria (props) {
 
-    const {firstBreedChoice, secondBreedChoice} = props;
+    const {firstBreedChoice, secondBreedChoice, setWinner} = props;
     const [pointsState, setPointsState] = useState({
         category1: null,
         category2: null,
@@ -11,17 +11,42 @@ function GameCriteria (props) {
     })
 
     function submitWinner () {
-
+        var values = Object.values(pointsState);
+        if (values.some((value) => {
+            return value == null;
+        })) {
+            alert("You need to select a choice for all!")
+        } else {
+            var countObject = {
+                [firstBreedChoice.name]: 0,
+                [secondBreedChoice.name]: 0,
+                Tie: 0,
+            };
+            for (let i in values) {
+                let currentBreed = values[i];
+                countObject[currentBreed] += 1;
+            }
+            determineWinner(countObject);
+        }
     }
 
+    function determineWinner (countObject) {
+        if (countObject.Tie === 4) {
+            setWinner("Tie");
+        } else if (countObject[firstBreedChoice.name] === countObject[secondBreedChoice.name]) {
+            setWinner("Tie");
+        } else if (countObject[firstBreedChoice.name] > countObject[secondBreedChoice.name]) {
+            setWinner(firstBreedChoice);
+        } else if (countObject[secondBreedChoice.name] > countObject[firstBreedChoice.name]) {
+            setWinner(secondBreedChoice);
+        }
+    }
 
     function setPoints (categoryNumber, e) {
         setPointsState((prevState) => {
             return {...prevState, [categoryNumber]: e.target.value}
         })
     }
-
-    console.log(pointsState)
 
     return (
         <div>
@@ -54,7 +79,7 @@ function GameCriteria (props) {
                     <option>Tie</option>
                 </select>
             <h1></h1>
-            <button onClick={submitWinner} >Submit Winner</button>
+            <button class='btn btn-primary btn-lg'onClick={submitWinner} >Submit Winner</button>
         </div>
     )
 }

@@ -77,7 +77,9 @@ function App () {
             <header className="App-header">
         
               <h1 class="dog-picker-title"><strong>DOG PICKER {currentYear}</strong></h1>
-              <Link to='/game'>Game</Link>
+              <p>In the market for a new dog and can't decide which breed? Choose at random below.</p>
+              <p>Or, click the button below to compare info between 2 breeds.</p>
+              <Link to='/game'><h1 class="btn btn-primary btn-lg"><strong>Play Dog Breed Comparison Game</strong></h1></Link>
               
             {/* display the dog categories */}
               <div class="container">
